@@ -5,18 +5,18 @@
 from ctypes import *
 from _winapi import CREATE_NEW_CONSOLE
 
-#为ctype变量创建符合匈牙利命名风格的匿名
+#涓篶type鍙橀噺鍒涘缓绗﹀悎鍖堢墮鍒╁懡鍚嶉鏍肩殑鍖垮悕
 WORD    = c_ushort
 DWORD   = c_ulong
 LPBYTE  = POINTER(c_ubyte)
 LPTSTR  = POINTER(c_char)
 HANDLE  = c_void_p
 
-#定义常量
+#瀹氫箟甯搁噺
 DEBUG_PROCESS = 0x01
 CREATE_NEW_CONSOLE = 0x10
 
-#定义函数CreateProcessA()所需的结构体
+#瀹氫箟鍑芥暟CreateProcessA()鎵�闇�鐨勭粨鏋勪綋
 class STARTUPINFO(Structure):
     _fields_=[ 
               ("cb", DWORD),
